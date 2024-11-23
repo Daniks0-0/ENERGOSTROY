@@ -2,6 +2,7 @@ import  Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { Routes, Route } from "react-router";
+import Navbar from "./components/Navbar";
 
 function App() {
 
@@ -11,11 +12,13 @@ function App() {
     
  
     <main>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      </Routes>
+     
+    <Navbar />
+    <Routes>
+    <Route index element={<Home />} /> {/* Главная страница */}
+  <Route path="projects" element={<Projects />} /> {/* Проекты */}
+  <Route path="privacy-policy" element={<PrivacyPolicy />} /> 
+    </Routes>
     </main>
 
   </div>
