@@ -4,14 +4,17 @@
     justify-content: space-between;
     margin-top: 125px;
     padding-left: 100px;
-    gap: calc(10px + 10%);
-    
+    max-width: 1718px;
+    width: 100%;
+    height: auto;
+
     .main-text {
         display: flex;
         flex-direction: column;
         max-width: 862px;
         width: 100%;
-        h1 { 
+
+        h1 {
             width: 862px;
             margin-top: 100px;
             font-family: var(--font-family);
@@ -24,7 +27,7 @@
             margin-top: 64px;
             font-family: var(--font-family);
             font-weight: 400;
-            font-size: 28px;
+            font-size: clamp(14px, 2vw, 28px);
             color: #c1c1c1;
         }
 
@@ -43,7 +46,7 @@
             a {
                 font-family: var(--font-family);
                 font-weight: 700;
-                font-size: 20px;
+                font-size: clamp(14px, 2vw, 20px);
                 color: #141411;
                 text-decoration: none;
             }
@@ -55,9 +58,100 @@
         border-radius: 10px 0 0 10px;
         max-width: 500px;
         width: 100%;
-        height:auto;
-      
+        height: auto;
+
     }
 }
 
-    
+@media (min-width: 601px) and (max-width: 1200px) {
+
+    .main {
+        max-width: 950px;
+        width: 100%;
+        height: auto;
+        padding-left: 70px;
+        gap: clamp(20px, 4vw, 80px);
+
+        .main-text {
+
+            h1 {
+                margin-top: 0px;
+                max-width: 563px;
+                width: 100%;
+            }
+
+            h2 {
+                margin-top: 37px;
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .link {
+                margin-top: 100px;
+                max-width: 380px;
+                width: 100%;
+                height: 50px;
+
+            }
+        }
+
+        img {
+            max-width: 303px;
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+
+}
+
+@media(min-width:300px) and (max-width:600px) {
+    .main {
+        margin-top: 22px;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+
+
+        .main-text {
+            align-items: center;
+            order: 2;
+
+            h1 {
+                margin-top: 16px;
+                max-width: 500px;
+                width: 100%;
+            }
+
+            h2 {
+                margin-top: 16px;
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .link {
+                align-items: center;
+                margin-top: 16px;
+                max-width: 500px;
+                width: 100%;
+                height: 40px;
+
+                a {}
+            }
+        }
+
+        img {
+            order: 1;
+            display: flex;
+            border-radius: 10px 10px 10px 10px;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+
+}
