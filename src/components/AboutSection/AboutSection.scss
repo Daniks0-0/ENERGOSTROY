@@ -1,0 +1,29 @@
+.aboutSection{
+    margin-top: 90px;
+    ul{
+       
+        padding-left: 2rem;
+        padding-right: 2rem;;
+        
+        li {
+            margin-top: 40px;
+            position: relative;
+            padding-left: 2.5rem; // Увеличиваем расстояние до текста
+            font-weight: 400;
+            font-size: 24px;
+            color: #fff;
+        
+            // Создаем кастомный маркер
+            &::after {
+                content: '';
+                background: url(../../assets/list.svg) no-repeat center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px; // Размер иконки маркера
+                height: 50px;
+            }
+        }
+    }
+}
