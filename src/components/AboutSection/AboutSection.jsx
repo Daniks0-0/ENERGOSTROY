@@ -20,14 +20,12 @@ const aboutTexts = [
 const AboutSection = () =>{
     return(
         <div className="aboutSection">
+            <h1>ЭНЕРГОСТРОЙ</h1>
             <ul>
             {aboutTexts.map(aboutText =>(
-                <About 
-                
+                <About     
                 key = {aboutText.key}
                 text = {aboutText.text}
-
-
                 />
 
             ))

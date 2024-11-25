@@ -1,18 +1,34 @@
-.aboutSection{
-    margin-top: 90px;
-    ul{
-       
+.aboutSection {
+
+    max-width: 1431px;
+    width: 100%;
+    margin: 0% auto;
+    height: auto;
+    margin-bottom: 150px;
+
+    h1 {
         padding-left: 2rem;
-        padding-right: 2rem;;
-        
+        margin-top: 150px;
+        margin-bottom: 90px;
+        font-weight: 500;
+        font-size: 48px;
+        color: #fff;
+    }
+
+    ul {
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+
         li {
             margin-top: 40px;
             position: relative;
             padding-left: 2.5rem; // Увеличиваем расстояние до текста
             font-weight: 400;
-            font-size: 24px;
+            font-size: clamp(12px, 2vw, 24px);
             color: #fff;
-        
+
             // Создаем кастомный маркер
             &::after {
                 content: '';
@@ -23,6 +39,86 @@
                 bottom: 0;
                 width: 20px; // Размер иконки маркера
                 height: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .aboutSection {
+        padding-left: 20px;
+    
+
+
+        h1 {
+            padding-left: 0rem;
+        }
+
+        ul {
+            padding-left: 0;
+
+
+
+
+            li {
+                margin-top: 40px;
+                position: relative;
+              
+             
+
+
+                &::after {
+                    content: '';
+                    background: url(../../assets/list.svg) no-repeat center;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 20px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+@media(min-width:300px) and (max-width:600px) {
+    .aboutSection {
+
+        padding-left: 10px;
+
+
+        h1 {
+            padding-left: 2rem;
+
+        }
+
+        ul {
+
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+
+            li {
+                margin-top: 40px;
+                position: relative;
+                padding-left: 2.5rem; // Увеличиваем расстояние до текста
+                font-weight: 400;
+                font-size: 24px;
+                color: #fff;
+
+
+                &::after {
+                    content: '';
+                    background: url(../../assets/list.svg) no-repeat center;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 20px;
+                    height: 50px;
+                }
             }
         }
     }
