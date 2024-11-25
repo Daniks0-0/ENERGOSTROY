@@ -1,0 +1,83 @@
+.servicesSection {
+    max-width: 1718px;
+    padding-left: 100px;
+    padding-right: 40px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+
+    h1 {
+        padding-left: 2rem;
+        margin-top: 150px;
+        margin-bottom: 90px;
+        font-weight: 500;
+        font-size: clamp(18px, 3vw, 48px);
+        color: #fff;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        .first-list,
+        .second-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            li {
+                max-width: 500px;
+                width: 100%;
+                margin-top: 40px;
+                position: relative;
+                padding-left: 2.5rem; // Увеличиваем расстояние до текста
+                font-weight: 400;
+                font-size: clamp(12px, 2vw, 24px);
+                color: #fff;
+
+                // Создаем кастомный маркер
+                &::after {
+                    content: '';
+                    background: url(../../assets/list.svg) no-repeat center;
+                    position: absolute;
+                    left: 0;
+                    top: 50%; // Смещение маркера вниз на 50% высоты 
+                    transform: translateY(-50%); // Центрирование маркера 
+                    bottom: 0;
+                    width: 20px;
+                    height: 50px;
+
+                }
+            }
+        }
+
+      
+    }
+
+
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+        .servicesSection {
+            h1 {}
+
+            ul {
+                li {}
+            }
+        }
+
+    }
+
+    @media(min-width:300px) and (max-width:600px) {
+        .servicesSection {
+            h1 {}
+
+            ul {
+                li {}
+            }
+        }
+
+
+    }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ServicesSection.scss";
 import Services from "../Services/Services";
 
 const textLists = [
