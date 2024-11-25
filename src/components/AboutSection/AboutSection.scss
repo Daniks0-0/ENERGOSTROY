@@ -1,8 +1,9 @@
 .aboutSection {
 
-    max-width: 1431px;
+    max-width: 1718px;
+    padding-left: 100px;
+    padding-right: 40px;
     width: 100%;
-    margin: 0% auto;
     height: auto;
     margin-bottom: 150px;
 
@@ -11,7 +12,7 @@
         margin-top: 150px;
         margin-bottom: 90px;
         font-weight: 500;
-        font-size: 48px;
+        font-size: clamp(18px, 3vw, 48px);
         color: #fff;
     }
 
@@ -47,10 +48,13 @@
 @media (min-width: 601px) and (max-width: 1200px) {
     .aboutSection {
         padding-left: 20px;
-    
+
 
 
         h1 {
+      
+            margin-top: 80px;
+            margin-bottom: 25px;
             padding-left: 0rem;
         }
 
@@ -61,10 +65,10 @@
 
 
             li {
-                margin-top: 40px;
+                margin-top:40px;
                 position: relative;
-              
-             
+
+
 
 
                 &::after {
@@ -75,7 +79,9 @@
                     top: 0;
                     bottom: 0;
                     width: 20px;
-                    height: 50px;
+                    max-height: 50px;
+                    height: auto;
+                    min-height: 25px;
                 }
             }
         }
@@ -85,40 +91,42 @@
 
 @media(min-width:300px) and (max-width:600px) {
     .aboutSection {
-
+        max-width: 500px;
+        width: 100%;
         padding-left: 10px;
+        padding-right: 10px;
 
 
         h1 {
-            padding-left: 2rem;
+        margin-top: 50px;
+ 
+        margin-bottom: 24px;
+
+            padding-left: 0%;
 
         }
 
         ul {
 
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 0%;
+            padding-right: 0%;
+            list-style-type: none;
 
 
             li {
-                margin-top: 40px;
-                position: relative;
-                padding-left: 2.5rem; // Увеличиваем расстояние до текста
-                font-weight: 400;
-                font-size: 24px;
-                color: #fff;
-
+       
+                margin-top: 12px;
+                list-style-type: none;
+                padding-left: 0%;
+                padding-right: 0%;
 
                 &::after {
-                    content: '';
-                    background: url(../../assets/list.svg) no-repeat center;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 20px;
-                    height: 50px;
+                    content: none;
                 }
+
+
+
+
             }
         }
     }
