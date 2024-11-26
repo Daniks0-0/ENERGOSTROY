@@ -9,7 +9,7 @@
     h1 {
         padding-left: 2rem;
         margin-top: 150px;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
         font-weight: 500;
         font-size: clamp(18px, 3vw, 48px);
         color: #fff;
@@ -53,31 +53,73 @@
             }
         }
 
-      
     }
+    .link-project {
+        
+        margin-left: 2rem;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 239px;
+        height: 82px;
+        background: #fff;
+
+        a {
+            font-weight: 500;
+            font-size: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}
 
 
 
     @media (min-width: 601px) and (max-width: 1200px) {
         .servicesSection {
             h1 {}
+            .list {}
+            
+        .first-list,
+        .second-list {
+           
 
-            ul {
-                li {}
+            li {
+            }
+
+        }
+        .link-project {
+            a{
+
             }
         }
 
     }
 
     @media(min-width:300px) and (max-width:600px) {
-        .servicesSection {
-            h1 {}
+         .servicesSection {
+            h1 {
 
-            ul {
-                li {}
+            }
+            .list {}
+            
+        .first-list,
+        .second-list {
+           
+
+            li {
+            }
+
+        }
+        .link-project {
+            a{
+                
             }
         }
 
 
+    }
     }
 }

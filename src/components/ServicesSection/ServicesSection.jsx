@@ -48,6 +48,9 @@ const ServicesSection = () => {
                 </ul>
 
             </div>
+            <div className="link-project">
+                <a href="/"> Проекты </a>
+            </div>
 
         </div>
     );
