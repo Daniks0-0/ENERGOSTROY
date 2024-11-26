@@ -7,7 +7,6 @@
     max-width: 1718px;
     width: 100%;
     height: auto;
-
     .main-text {
         display: flex;
         flex-direction: column;
@@ -96,9 +95,11 @@
         }
 
         img {
-            max-width: 303px;
+            max-width: 400px;
             width: 100%;
+            max-height:500px;
             height: auto;
+            min-height: 300px;
 
         }
     }

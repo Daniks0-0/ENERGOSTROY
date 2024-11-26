@@ -5,13 +5,6 @@ const About = (props) =>{
     return(
        
                 <li>{props.text}</li>
-
-       
-           
-          
-
-  
-
     );
 }
 

@@ -31,11 +31,8 @@ const AboutSection = () =>{
             ))
 
             }
-
             </ul>
-           
-
-        </div>
+            </div>
     );
 }
 

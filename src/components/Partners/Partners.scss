@@ -1,0 +1,122 @@
+.Partners {
+    margin-top: 20px;
+    background: #e0b992;
+    display: flex;
+    justify-content: center;
+    padding-top: clamp(20px,4vw, 100px);
+    padding-bottom: clamp(20px,6vw, 100px);
+
+    div {
+       
+        width: 1047px;
+        height: 621px;
+
+        h1 {
+            font-weight: 500;
+            font-size:52px;
+            color: #000;
+            margin-bottom: 50px;
+        }
+
+        .list-partners {
+            display: flex;
+            flex-direction: row;
+            gap: clamp(10px, 3vw, 50px);
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .img-base {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 15px;
+                width: 468px;
+                height: 440px;
+                background-color: #fff;
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.45), 0 7px 10px 0 rgba(0, 0, 0, 0.32), 0 13px 19px 0 rgba(0, 0, 0, 0.27), 0 22px 34px 0 rgba(0, 0, 0, 0.22), 0 42px 63px 0 rgba(0, 0, 0, 0.18), 0 100px 150px 0 rgba(0, 0, 0, 0.13);
+
+                img {
+                    width: 236px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+    .Partners {
+      
+    
+        div {
+           padding-left: 10px;
+           padding-right: 10px;
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+    
+            h1 {
+                font-size:32px;
+                margin-bottom: 25px;
+            }
+    
+            .list-partners {
+             
+            
+                .img-base {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+                    max-width: 400px;
+                    width: 100%;
+                    max-height: 400px;
+                    height: auto;
+                    min-height: 363px;
+                    img {
+                        width: 200px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:300px) and (max-width:600px) {
+    .Partners {
+      
+    
+        div {
+           padding-left: 10px;
+           padding-right: 10px;
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+    
+            h1 {
+                font-size:32px;
+                margin-bottom: 25px;
+            }
+    
+            .list-partners {
+                flex-direction: column;
+                gap: 20px;
+            
+                .img-base {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+                    max-width: 400px;
+                    width: 100%;
+                    max-height: 400px;
+                    height: auto;
+                    min-height: 234px;
+                    img {
+                        width: 200px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
