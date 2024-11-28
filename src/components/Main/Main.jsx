@@ -17,7 +17,10 @@ const Main = () => {
                     </a>
                 </div>
             </div>
-                <img src="src\assets\image.svg" alt="" />
+            <div className="img">
+            <img src="src\assets\image.svg" alt="" />
+            </div>
+               
         </div>
     );
     

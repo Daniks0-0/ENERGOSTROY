@@ -3,6 +3,8 @@ import Main from "../components/Main/Main";
 import AboutSection from "../components/AboutSection/AboutSection";
 import ServicesSection from "../components/ServicesSection/ServicesSection";
 import Partners from "../components/Partners/Partners";
+import Contacts from "../components/Contacts/Contacts";
+
 
 function Home(){
     return(
@@ -11,6 +13,8 @@ function Home(){
         <AboutSection />
         <ServicesSection />
         <Partners />
+        <Contacts />
+        
         
 
        </div>
