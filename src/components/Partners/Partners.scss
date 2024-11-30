@@ -1,22 +1,13 @@
 .Partners {
     margin-top: 20px;
     background: #e0b992;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: clamp(20px,4vw, 100px);
     padding-bottom: clamp(20px,6vw, 100px);
-    
-    .Partners::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw; /* Растягиваем фон */
-        height: 100%;
-        background: #e0b992; /* Цвет фона */
-        z-index: -1; /* Отправляем фон назад */
-    }
-    
+   
    
 
     div {
@@ -96,9 +87,12 @@
 }
 @media(min-width:300px) and (max-width:600px) {
     .Partners {
+       
       
     
         div {
+            display: flex;
+            align-items: center;
            padding-left: 10px;
            padding-right: 10px;
             max-width: 1000px;
