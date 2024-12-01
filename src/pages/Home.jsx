@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import ServicesSection from "../components/ServicesSection/ServicesSection";
 import Partners from "../components/Partners/Partners";
 import Contacts from "../components/Contacts/Contacts";
+import Footer from "../components/Footer/Footer";
 
 
 function Home(){
@@ -14,6 +15,8 @@ function Home(){
         <ServicesSection />
         <Partners />
         <Contacts />
+        <Footer />
+
         
         
 

@@ -18,11 +18,7 @@ const Navbar = () => {
                     </Link>
 
                 </li>
-                <li>
-                    <Link to="/privacyPolicy" end>
-                        Политика конфиденциальности
-                    </Link>
-                </li>
+             
             </ul>
         </nav>
     );

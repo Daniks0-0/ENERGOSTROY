@@ -1,0 +1,104 @@
+.footer {
+    max-width: 1600px;
+    width: 100%;
+    margin-top: clamp(25px,4vw,60px);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:clamp(100px,20vw,200px);
+    justify-content: center;
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap:10px;
+        a {
+            font-weight: 400;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .aboutCompany {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+        a {
+            font-weight: 500;
+            font-size: 40px;
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .second{
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .second:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .contacts__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap:10px;
+        a {
+            font-weight: 400;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+    .footer{
+        .navigation{
+            display: none;
+        }
+        .aboutCompany{
+            a{            
+            font-size: 32px;
+            }
+            .second{
+                font-size: 18px;
+            }
+        }
+        .contacts__footer{
+            display: none;
+        }
+
+    }
+
+}
+@media(min-width:300px) and (max-width:600px) {
+    .footer{
+        .navigation{
+            display: none;
+        }
+        .aboutCompany{
+            a{            
+                font-size:20px;
+                }
+                .second{
+                    font-size:12px;
+                }
+        }
+        .contacts__footer{
+            display: none;
+        }
+    }
+}
