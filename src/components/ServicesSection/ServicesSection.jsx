@@ -1,6 +1,7 @@
 import React from "react";
 import "./ServicesSection.scss";
 import Services from "../Services/Services";
+import { Link } from "react-router";
 
 const textLists = [
     {
@@ -48,10 +49,9 @@ const ServicesSection = () => {
                 </ul>
 
             </div>
-            <div className="link-project">
-                <a href="/"> Проекты </a>
-            </div>
-
+            <Link to="/projects" className="link-project">
+                   <p>Проекты</p> 
+            </Link>
         </div>
     );
 };

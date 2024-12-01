@@ -6,9 +6,9 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="navigation">
-                <a href="">Услуги</a>
-                <a href="">Контакты</a>
-                <a href="">Проекты</a>
+                <a href="#servicesSection-id">Услуги</a>
+                <a href="#contacts-id">Контакты</a>
+                <Link to="/projects" end>Проекты</Link>
             </div>
             <div className="aboutCompany">
                 <a href="/">2024 © ЭНЕРГОСТРОЙ</a>

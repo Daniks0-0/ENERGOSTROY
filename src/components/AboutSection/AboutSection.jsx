@@ -19,7 +19,7 @@ const aboutTexts = [
 
 const AboutSection = () =>{
     return(
-        <div className="aboutSection">
+        <div className="aboutSection" id="aboutSection-id">
             <h1>ЭНЕРГОСТРОЙ</h1>
             <ul>
             {aboutTexts.map(aboutText =>(

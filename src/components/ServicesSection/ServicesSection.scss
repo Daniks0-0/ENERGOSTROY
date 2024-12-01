@@ -56,20 +56,20 @@
         height: 82px;
         background: #fff;
         cursor: pointer;
-        transition: all 1s  linear;
-      
-        a {
-            font-weight: 500;
-            font-size: clamp(14px, 2vw, 20px);
-            color: #000;
-            text-decoration: none;
-            transition: 1s  linear;
+        text-decoration: none;
+        transition: all 0.5s  linear;
+            p{
+                font-weight: 500;
+                font-size: clamp(14px, 2vw, 20px);
+                color: #000;
+                transition: 0.5s  linear;
         }
     }
     .link-project:hover{
         background: #ffae34;
-        a{
+        p{
             color: #fff;
+           
         }
     }
 }

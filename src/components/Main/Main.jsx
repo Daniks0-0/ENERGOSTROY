@@ -11,11 +11,11 @@ const Main = () => {
                 <h2>
                 ЭНЕРГОСТРОЙ - Энергия в каждом решении, надежность в каждом проекте
                 </h2>
-                <div className="link">
-                    <a href="/">
+              
+                    <a href="#aboutSection-id" className="link">
                     Подробнее о компании
                     </a>
-                </div>
+           
             </div>
             <div className="img">
             <img src="src\assets\image.svg" alt="" />
