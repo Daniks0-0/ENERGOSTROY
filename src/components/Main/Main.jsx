@@ -19,11 +19,9 @@ const Main = () => {
             </div>
             <div className="img">
             <img src="src\assets\image.svg" alt="" />
-            </div>
-               
+            </div>  
         </div>
-    );
-    
+    ); 
 }
 
 export default Main;

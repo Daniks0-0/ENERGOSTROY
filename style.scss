@@ -3,7 +3,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body{
     margin: 0;
     font-family: "Oswald", sans-serif;
@@ -11,12 +10,10 @@ body{
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-
     div{
       display: flex;
       max-width: 1600px;
       flex-direction: column;
       justify-content: center;
     }
-  
 }
