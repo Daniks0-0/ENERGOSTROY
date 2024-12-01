@@ -16,10 +16,6 @@ function Home(){
         <Partners />
         <Contacts />
         <Footer />
-
-        
-        
-
        </div>
     );
 }

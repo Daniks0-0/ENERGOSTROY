@@ -55,12 +55,21 @@
         width: 239px;
         height: 82px;
         background: #fff;
+        cursor: pointer;
+        transition: all 1s  linear;
       
         a {
             font-weight: 500;
             font-size: clamp(14px, 2vw, 20px);
             color: #000;
             text-decoration: none;
+            transition: 1s  linear;
+        }
+    }
+    .link-project:hover{
+        background: #ffae34;
+        a{
+            color: #fff;
         }
     }
 }
