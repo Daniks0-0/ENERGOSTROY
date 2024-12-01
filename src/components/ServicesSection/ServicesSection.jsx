@@ -31,7 +31,7 @@ const textLists = [
 
 const ServicesSection = () => {
     return (
-        <div className="servicesSection">
+        <div className="servicesSection" id="servicesSection-id">
             <h1>Спектр услуг</h1>
             <div className="list">
                 <ul className="first-list">

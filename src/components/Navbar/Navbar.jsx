@@ -8,24 +8,27 @@ const Navbar = () => {
     return (
         <nav>
         <div>
-            <img src={logo} alt="" />
+            <a href="/">
+            <img src={logo} alt="Энергострой" />
+            </a>
+            
         </div>
             <ul>
                 <li>
-                    <Link to="/" end>
+                    <Link to="/" end className="link">
                         Главная
                     </Link>
                 </li>
                 <li>
-                    <Link to="/projects" end>
+                    <Link to="/projects" end className="link">
                         Проекты
                     </Link>
                 </li>
                 <li>
-                    <a href="">Контакты</a>
+                    <a href="#contacts-id" className="link">Контакты</a>
                 </li>
                 <li>
-                    <a href="">Услуги</a>
+                    <a href="#servicesSection-id" className="link">Услуги</a>
                 </li>
              
             </ul>

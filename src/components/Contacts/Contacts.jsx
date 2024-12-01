@@ -3,7 +3,7 @@ import "./Contacts.scss";
 
 const Contacts = () =>{
     return(
-        <div className="contacts">
+        <div className="contacts" id="contacts-id">
             <h1>Контактная информация</h1>
             <div className="contacts-list">
                 <a href="tel:+74742710156">+7 (4742) 71-01-56</a>
