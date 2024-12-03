@@ -1,10 +1,36 @@
 import React from "react";
-import { Link } from "react-router";
+import {  NavLink, useNavigate } from "react-router";
 import "./Navbar.scss";
 import logo from "../../assets/mainlogo.svg";
 
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
+    //обработчки для "контакты"
+    const handleContactsClick = () =>{
+        navigate("/"); //переход на главную страницу
+         //скролл к разделу "Контакты"
+     setTimeout(() => {
+        const contactsSection = document.getElementById("contacts-id");
+        if (contactsSection) {
+            contactsSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }, 100); 
+    }
+    
+    //обработчки для "Услуги"
+    const handleServicesClick = () =>{
+        navigate("/");
+         //скролл к разделу "Услуги"
+        setTimeout(()=>{
+            const servicesSection = document.getElementById("servicesSection-id");
+            if(servicesSection){
+                servicesSection.scrollIntoView({behavior: "smooth"});
+            }
+        },100);
+    }
+    
     return (
         <nav>
         <div>
@@ -15,20 +41,24 @@ const Navbar = () => {
         </div>
             <ul>
                 <li>
-                    <Link to="/" end className="link">
+                    <NavLink to="/" end className="link">
                         Главная
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/projects" end className="link">
+                    <NavLink to="/projects" end className="link">
                         Проекты
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#contacts-id" className="link">Контакты</a>
+                <button onClick={handleContactsClick} className="link">
+                        Контакты
+                    </button>
                 </li>
                 <li>
-                    <a href="#servicesSection-id" className="link">Услуги</a>
+                <button onClick={handleServicesClick} className="link">
+                        Услуги
+                    </button>
                 </li>
              
             </ul>

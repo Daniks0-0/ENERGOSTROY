@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import "./Footer.scss";
 
 const Footer = () => {
+    const data = new Date().getFullYear(); //текущий год
     return (
         <div className="footer">
             <div className="navigation">
@@ -11,7 +12,7 @@ const Footer = () => {
                 <Link to="/projects" end>Проекты</Link>
             </div>
             <div className="aboutCompany">
-                <a href="/">2024 © ЭНЕРГОСТРОЙ</a>
+                <a href="/"> {data} © ЭНЕРГОСТРОЙ</a>
                 <Link to="/privacyPolicy" className="second" end>
                     Политика конфиденциальности
                 </Link>

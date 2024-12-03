@@ -25,11 +25,23 @@ nav {
         gap: 80px;
         li {
             .link{
+              
+                background-color:#808080 ;
+                outline: none;
+                border: 0;
+                background: transparent;
                 font-weight: 300;
                 font-size: 18px;
+                font-family: var(--font-family);
                 color: #fff;
                 text-decoration: none;
                 transition: 0.5s;
+
+                display: inline-block;
+                padding: 0; 
+                margin: 0; 
+                line-height: normal; 
+                cursor: pointer; 
             }
             .link:hover{
                 color: #a3a3a3;
