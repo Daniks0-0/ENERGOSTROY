@@ -1,7 +1,6 @@
 import React from "react";
 import About from "../About/About";
 import "./AboutSection.scss";
-
 const aboutTexts = [
     {    
         key:1,
@@ -19,6 +18,7 @@ const aboutTexts = [
 
 const AboutSection = () =>{
     return(
+  
         <div className="aboutSection" id="aboutSection-id">
             <h1>ЭНЕРГОСТРОЙ</h1>
             <ul>

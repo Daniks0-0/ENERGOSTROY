@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router";
-import { slide as Menu } from 'react-burger-menu'
 import "./Navbar.scss";
 import logo from "../../assets/mainlogo.svg";
 import openButton from "../../assets/openButton.svg";
@@ -8,7 +7,7 @@ import openButton from "../../assets/openButton.svg";
 
 const Navbar = () => {
 
-    const CustomBurgerIcon = () => openButton;
+  
 
     const navigate = useNavigate();
 
@@ -74,14 +73,6 @@ const Navbar = () => {
                         <a href="mailto:energo_stroy48@bk.ru?subject=Здравствуйте! Я отправляю это письмо через сайт вашей компании.">energo_stroy48@bk.ru</a>
                     </div>
                 </nav> 
-
-         
-        
-       
-      
-
-
-
 
 
 

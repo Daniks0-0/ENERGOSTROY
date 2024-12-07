@@ -9,10 +9,7 @@ function App() {
 
   return (
     <div className="app">
-
-
       <main>
-
         <Navbar />
         <Routes>
           <Route index element={<Home />} /> {/* Главная страница */}
