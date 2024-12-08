@@ -1,9 +1,10 @@
 import React from "react";
 import "./Main.scss";
-
+import photo from "../../assets/image.svg";
 const Main = () => {
     return(
         <div className="main">
+            <div className="main__width">
             <div className="main-text">
                 <h1> 
                 Полный спектр услуг в строительстве электроэнергетической инфраструктуры
@@ -18,8 +19,9 @@ const Main = () => {
            
             </div>
             <div className="img">
-            <img src="src\assets\image.svg" alt="" />
+            <img src={photo} alt="" />
             </div>  
+            </div>
         </div>
     ); 
 }

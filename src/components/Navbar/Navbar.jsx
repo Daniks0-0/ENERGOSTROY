@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router";
 import "./Navbar.scss";
 import logo from "../../assets/mainlogo.svg";
-import openButton from "../../assets/openButton.svg";
+
 
 
 const Navbar = () => {
