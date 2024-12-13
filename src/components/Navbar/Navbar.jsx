@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import "./Navbar.scss";
 import logo from "../../assets/mainlogo.svg";
+import mobileLogo from "../../assets/logoMobile.svg";
 
 
 const Navbar = () => {
@@ -42,7 +43,8 @@ const Navbar = () => {
                 className={`burger ${menuOpen ? "open" : ""}`}
                 id="button_id"
                 onClick={handleBurgerClick}
-            >
+            > 
+            {/* разметка для бургер меню */}
                 <div className="burger__line"></div>
                 <div className="burger__line"></div>
                 <div className="burger__line"></div>
@@ -51,6 +53,7 @@ const Navbar = () => {
                 <div>
                     <a href="/">
                         <img src={logo} alt="Энергострой" />
+                        <img src = {mobileLogo} alt="Энергострой" className="logoMobile"/>
                     </a>
                 </div>
                 <ul className={`for-PC ${menuOpen ? "active" : ""}`}>                     {/*добавляем класс active к элементу, если значение переменной menuOpen равно true. */}
