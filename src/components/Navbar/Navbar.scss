@@ -12,6 +12,7 @@ div {
         margin-top: 20px;
         width: 100%;
 
+
         div {
             a {
                 img {
@@ -77,7 +78,7 @@ div {
 
 @media (max-width: 1200px) {
     div {
-  
+
         div {
             a {
                 img {
@@ -120,9 +121,8 @@ div {
                 transition: 1s;
             }
 
-            // Анимация для открытого состояния
+            // Анимация кнопки меню для открытого состояния
             &.open {
-
                 .burger__line {
                     background-color: #000;
 
@@ -154,14 +154,11 @@ div {
         // Скрываем навигацию для мобильных устройств
         .menu {
             display: none; // По умолчанию скрыто
-            transition: opacity 0.5s ease; 
            
-
-
             &.open {
                 display: flex;
                 flex-direction: column;
-                justify-content:flex-start;
+                justify-content: flex-start;
                 background: #fff; // Добавляем фон для меню
                 width: 80%;
                 height: 100%;
@@ -171,7 +168,9 @@ div {
                 right: 0;
                 padding: 20px;
                 z-index: 10;
-             
+                opacity: 1;
+           
+
 
                 .for-PC {
                     display: flex;

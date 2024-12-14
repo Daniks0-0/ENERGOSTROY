@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import "./Navbar.scss";
 import logo from "../../assets/mainlogo.svg";
@@ -8,6 +8,37 @@ import mobileLogo from "../../assets/logoMobile.svg";
 const Navbar = () => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false); // Состояние для управления меню
+    //для отключение скролла при открытие меню
+    useEffect(()=>{
+        if(menuOpen){
+            //отключаю скролл
+            document.body.style.overflowY = "hidden";
+            document.body.opacity = "0.2";
+
+        }
+        else{
+            //включаю скролл
+            document.body.style.overflowY = "";
+            document.body.style.opacity = "1"; // Сброс значения
+        }
+        return () => {
+            document.body.style.overflowY = "";
+            document.body.style.opacity = "1";
+        };
+
+    }, [menuOpen]);
+    //обработчки для "главная"
+    const handleMainClick = () => {
+        navigate("/"); //переход на главную страницу
+        //скролл к разделу "главная"
+        setTimeout( () =>{
+            const mainSection = document.getElementById("main");
+            if(mainSection){
+                mainSection.scrollIntoView({behavior:"smooth"});
+            }
+        }, 100);
+        setMenuOpen(false); //закрываем меню после нажатия на ссылку
+    };
     //обработчки для "контакты"
     const handleContactsClick = () => {
         navigate("/"); //переход на главную страницу
@@ -19,7 +50,7 @@ const Navbar = () => {
             }
         }, 100);
         setMenuOpen(false); //закрываем меню после нажатия на ссылку
-    }
+    };
     //обработчки для "Услуги"
     const handleServicesClick = () => {
         navigate("/");
@@ -31,11 +62,11 @@ const Navbar = () => {
             }
         }, 100); //100 задержка для прогрузки страницы
         setMenuOpen(false); //закрываем меню после нажатия на ссылку
-    }
+    };
     //кнопка бургер меню
     const handleBurgerClick = () => {
         setMenuOpen(!menuOpen); // Переключение состояния меню
-    }
+    };
 
     return (
         <div>
@@ -58,7 +89,7 @@ const Navbar = () => {
                 </div>
                 <ul className={`for-PC ${menuOpen ? "active" : ""}`}>                     {/*добавляем класс active к элементу, если значение переменной menuOpen равно true. */}
                     <li>
-                        <NavLink to="/" end className="link" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/" end className="link" onClick={handleMainClick}>
                             Главная
                         </NavLink>
                     </li>

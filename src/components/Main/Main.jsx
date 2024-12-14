@@ -3,7 +3,7 @@ import "./Main.scss";
 import photo from "../../assets/image.svg";
 const Main = () => {
     return(
-        <div className="main">
+        <div className="main" id="main">
             <div className="main__width">
             <div className="main-text">
                 <h1> 
