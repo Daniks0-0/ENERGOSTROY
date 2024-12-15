@@ -1,0 +1,8 @@
+//размеры шрифтов
+$font-size-h2: clamp(18px, 3vw, 48px);
+$font-size-p:clamp(12px, 2vw, 24px);
+$font-size-button:clamp(14px, 2vw, 20px);
+
+//отсутпы для мобильных устройств 
+$margin-bottom-mobile:50px;
+$margin-top-mobile:50px;

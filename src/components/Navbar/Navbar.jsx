@@ -13,19 +13,14 @@ const Navbar = () => {
         if(menuOpen){
             //отключаю скролл
             document.body.style.overflowY = "hidden";
-            document.body.opacity = "0.2";
-
         }
         else{
             //включаю скролл
             document.body.style.overflowY = "";
-            document.body.style.opacity = "1"; // Сброс значения
         }
         return () => {
             document.body.style.overflowY = "";
-            document.body.style.opacity = "1";
         };
-
     }, [menuOpen]);
     //обработчки для "главная"
     const handleMainClick = () => {

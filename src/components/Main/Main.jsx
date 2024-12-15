@@ -19,7 +19,7 @@ const Main = () => {
            
             </div>
             <div className="img">
-            <img src={photo} alt="" />
+            <img src={photo} alt="Линии передач"/>
             </div>  
             </div>
         </div>

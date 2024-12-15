@@ -1,3 +1,4 @@
+@use '_variables.scss' as vars;
 .Partners {
     margin-top: 20px;
     background: #e0b992;
@@ -74,8 +75,13 @@
 }
 @media(min-width:300px) and (max-width:600px) {
     .Partners {
+        margin-top:vars.$margin-top-mobile;
+        margin-bottom: vars.$margin-bottom-mobile;
+        padding-top: vars.$margin-top-mobile;
+        padding-bottom:vars.$margin-bottom-mobile;
         div {
             display: flex;
+            flex-direction: column;
             align-items: center;
            padding-left: 10px;
            padding-right: 10px;

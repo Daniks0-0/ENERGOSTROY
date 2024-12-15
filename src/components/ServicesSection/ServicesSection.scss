@@ -1,3 +1,4 @@
+@use '_variables.scss' as vars;
 .servicesSection {
     max-width: 1718px;
     padding: 0 40px 150px 100px; 
@@ -8,7 +9,7 @@
         padding-left: 2rem;
         margin: 150px 0 80px; 
         font-weight: 500;
-        font-size: clamp(18px, 3vw, 48px);
+        font-size:vars.$font-size-h2;
         color: #fff;
     }
 
@@ -29,7 +30,7 @@
                 position: relative;
                 padding-left: 2.5rem;
                 font-weight: 400;
-                font-size: clamp(12px, 2vw, 24px);
+                font-size:vars.$font-size-p;
                 color: #fff;
 
                 &::after {
@@ -61,7 +62,7 @@
        
             p{
                 font-weight: 500;
-                font-size: clamp(14px, 2vw, 20px);
+                font-size:vars.$font-size-button;
                 color: #000;
                 transition: 0.5s  linear;
         }
@@ -117,6 +118,8 @@
 @media (min-width: 300px) and (max-width: 600px) {
     .servicesSection {
         padding: 0 10px;
+        margin-bottom: vars.$margin-bottom-mobile;
+        margin-top: vars.$margin-top-mobile;
 
         h1 {
             margin: 0 0 12px;

@@ -9,8 +9,9 @@ function App() {
 
   return (
     <div className="app">
-      <main>
+  
       <Navbar/>
+      <main>
         <Routes>
           <Route index element={<Home />} /> {/* Главная страница */}
           <Route path="projects" element={<Projects />} /> {/* Проекты */}

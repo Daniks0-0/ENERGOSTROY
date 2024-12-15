@@ -1,3 +1,4 @@
+@use '_variables.scss' as vars;
 .aboutSection {
 
     max-width: 1718px;
@@ -12,7 +13,7 @@
         margin-top: 150px;
         margin-bottom: 90px;
         font-weight: 500;
-        font-size: clamp(18px, 3vw, 48px);
+        font-size: vars.$font-size-h2;
         color: #fff;
     }
 
@@ -27,7 +28,7 @@
             position: relative;
             padding-left: 2.5rem; // Увеличиваем расстояние до текста
             font-weight: 400;
-            font-size: clamp(12px, 2vw, 24px);
+            font-size:vars.$font-size-p;
             color: #fff;
 
             // Создаем кастомный маркер
@@ -62,9 +63,6 @@
         ul {
             padding-left: 0;
 
-
-
-
             li {
                 margin-top: 40px;
                 position: relative;
@@ -94,7 +92,8 @@
     .aboutSection {
         max-width: 500px;
         width: 100%;
-        margin-bottom: 50px;
+        margin-top:vars.$margin-top-mobile;
+        margin-bottom:vars.$margin-bottom-mobile;
         padding-left:10px;
         padding-right:10px;
 
