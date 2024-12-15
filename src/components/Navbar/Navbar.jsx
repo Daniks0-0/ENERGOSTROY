@@ -77,10 +77,10 @@ const Navbar = () => {
             </button>
             <nav className={`menu ${menuOpen ? "open" : ""}`}>
                 <div>
-                    <a href="/">
+                    <NavLink href="/">
                         <img src={logo} alt="Энергострой" />
                         <img src = {mobileLogo} alt="Энергострой" className="logoMobile"/>
-                    </a>
+                    </NavLink>
                 </div>
                 <ul className={`for-PC ${menuOpen ? "active" : ""}`}>                     {/*добавляем класс active к элементу, если значение переменной menuOpen равно true. */}
                     <li>
