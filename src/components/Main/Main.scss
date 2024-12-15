@@ -1,4 +1,5 @@
 @use '_variables.scss' as vars;
+
 .main {
 
     margin-top: 125px;
@@ -35,20 +36,19 @@
             }
 
             .link {
-                margin-top:120px;
+                margin-top: 120px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 10px;
-                max-width: 380px;
-                width: 100%;
+                width: 380px;
                 height: 82px;
                 background: #fff;
                 cursor: pointer;
                 transition: all 0.5s linear;
                 box-shadow: 0 0px 21px 0 rgba(0, 0, 0, 0.1), 0 0px 31px 0 rgba(0, 0, 0, 0.07), 0 1px 35px 0 rgba(0, 0, 0, 0.06), 0 1px 38px 0 rgba(0, 0, 0, 0.05), 0 2px 42px 0 rgba(0, 0, 0, 0.04), 0 4px 63px 0 rgba(0, 0, 0, 0.03);
                 font-weight: 700;
-                font-size:vars.$font-size-button;
+                font-size: vars.$font-size-button;
                 color: #141411;
                 text-decoration: none;
             }
@@ -76,27 +76,26 @@
 
 @media (min-width: 601px) and (max-width: 1200px) {
     .main {
+        margin-top: 50px;
         width: 100%;
         height: auto;
         padding-left: 20px;
-    
 
         .main-text {
-          
 
             h1 {
                 margin-top: 0px;
             }
 
             h2 {
-                margin-top:0;
+                margin-top: 0;
             }
 
             .link {
-                margin-top: clamp(18px, 3vw, 120px);
+                margin-top: 50px !important;
                 max-width: 380px;
                 width: 100%;
-                height: 50px;
+                height: 50px !important;
             }
         }
 
@@ -105,7 +104,6 @@
             width: 100%;
             max-height: 500px;
             height: auto;
-            min-height: 300px;
 
         }
     }
@@ -113,45 +111,47 @@
 
 @media(min-width:300px) and (max-width:600px) {
     .main {
-        margin-top: 22px;
-        flex-direction: column;
-        align-items: center;
+        margin-top: 50px;
         padding-left: 10px;
         padding-right: 10px;
-
-        .main-text {
+        .main__width {
+            flex-direction: column;
             align-items: center;
-            order: 2;
+            margin-top:0;
+            .main-text {
 
-            h1 {
-                margin-top: 16px;
-                max-width: 500px;
-                width: 100%;
-            }
-
-            h2 {
-                margin-top: 16px;
-                max-width: 500px;
-                width: 100%;
-            }
-
-            .link {
                 align-items: center;
-                margin-top: 16px;
-                max-width: 500px;
-                width: 100%;
-                height: 40px;
+                order: 2;
+    
+                h1 {
+                    margin-top: 50px;
+                    width: 100%;
+                }
+    
+                h2 {
+                    margin-top: 16px !important;
+                    width: 100%;
+                }
+    
+                .link {
+                    align-items: center;
+                    margin-top: 16px !important;
+                    width: 100%;
+                    height: 40px !important;
+                }
             }
+    
+            img {
+                order: 1;
+                display: flex;
+                border-radius: 10px 10px 10px 10px;
+                width: 100%;
+                height: auto;
+    
+            }
+          
         }
 
-        img {
-            order: 1;
-            display: flex;
-            border-radius: 10px 10px 10px 10px;
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-
-        }
+        
     }
 }
