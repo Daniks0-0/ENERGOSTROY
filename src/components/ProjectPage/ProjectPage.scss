@@ -1,29 +1,76 @@
 @use '_variables.scss' as vars;
-.ProjectPage{
-    max-width: 1600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-size: vars.$font-size-h2;
-        color: #fff;
-        margin-top: 90px;
-        margin-bottom: 90px;
 
-    }
-    .project-card{
+.ProjectPage {
+
+    padding-left: 100px;
+    padding-right: 40px;
+
+    .ProjectPage__content {
+        max-width: 1600px;
+        width: 100%;
         display: flex;
-        flex-direction: row;
-        .photo-gallery{
-          
-            
+        flex-direction: column;
+        justify-content: center;
 
+        h1 {
+            font-size: vars.$font-size-h2;
+            color: #fff;
+            margin: 90px 0;
         }
-        img{
-            max-width: 500px;
+
+        .project-card {
+            max-width: 1600px;
             width: 100%;
-        }
-        
-    }
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
 
+            .photo-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                img {
+                    width: 100%;
+                    max-width: 500px;
+                    object-fit: cover;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+                    &:nth-child(3) {
+                        max-width: 1070px;
+                    }
+                }
+            }
+
+            p {
+                color: #f1f1f1;
+                font-size: vars.$font-size-p;
+                text-align: center;
+            }
+        }
+
+        // Стили для первой карточки
+        .project-card:first-of-type {
+            flex-direction: column;
+          
+
+            .photo-gallery {
+                justify-content: center; // Центрируем изображения
+                gap: 70px;
+
+                img {
+                    max-width: 500px;
+
+                    &:nth-child(3) {
+                        max-width: 1070px;
+                    }
+                }
+            }
+
+
+        }
+
+    }
 }

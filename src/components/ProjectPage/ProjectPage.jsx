@@ -28,6 +28,7 @@ const contents = [
 const ProjectPage = () =>{
     return(
         <div className="ProjectPage">
+            <div className="ProjectPage__content">
             <h1>
             Реализованные проекты
             </h1>
@@ -39,6 +40,9 @@ const ProjectPage = () =>{
                 />
             ))}
   
+
+            </div>
+           
         </div>
     );
 }
