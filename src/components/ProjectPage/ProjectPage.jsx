@@ -9,10 +9,7 @@ import others from "../../assets/others.svg";
 
 
 const contents = [
-    {
-        text: "Реконструкция электросетевых объектов  для Чаплыгинского РЭС для нужд ПАО  «Россети Центр» - «Липецкэнерго»",
-        photo: [Chaplygin1,Chaplygin2, Chaplygin3],
-    },
+
     {
         text: "Реконструкция электросетевых объектов  для Лебедянского РЭС для нужд ПАО «Россети Центр» - «Липецкэнерго»",
         photo: [Lebedyan],
@@ -32,6 +29,16 @@ const ProjectPage = () =>{
             <h1>
             Реализованные проекты
             </h1>
+            <div className="static-gallery">
+                <div className="row">
+                <img src={Chaplygin1} alt="линии электропередач" />
+                <img src={Chaplygin2} alt="линии электропередач" />
+                </div>
+                <div className="unrow">
+                <img src={Chaplygin3} alt="линии электропередач" />
+                </div>
+
+            </div>
             {contents.map(content =>(
                 <ProjectCard 
                 key={content.index}
@@ -40,7 +47,6 @@ const ProjectPage = () =>{
                 />
             ))}
   
-
             </div>
            
         </div>

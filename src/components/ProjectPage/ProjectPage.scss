@@ -1,9 +1,8 @@
 @use '_variables.scss' as vars;
 
 .ProjectPage {
-
-    padding-left: 100px;
-    padding-right: 40px;
+    padding-left: 100px !important;
+    padding-right: 40px !important;
 
     .ProjectPage__content {
         max-width: 1600px;
@@ -18,59 +17,104 @@
             margin: 90px 0;
         }
 
+        // Галерея статичных изображений
+        .static-gallery {
+            max-width: 1600px;
+            width: 100%;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+
+            .row {
+                max-width: 1600px; 
+                width: 100%; 
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between; 
+
+                img {
+                    max-width: 48%; 
+                    flex: 0 0 48%; 
+                    height: auto; 
+                    object-fit: cover; 
+                    margin-bottom: 50px;
+                }
+            }
+
+            .unrow {
+                img {
+                    width: 100%; // Изображение занимает всю ширину родителя
+                }
+            }
+        }
+
+        // Карточки проектов
         .project-card {
             max-width: 1600px;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 30px;
+            align-items: center;
+            gap: 20px;
             margin-bottom: 50px;
 
             .photo-gallery {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 30px;
 
                 img {
-                    width: 100%;
-                    max-width: 500px;
-                    object-fit: cover;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-                    &:nth-child(3) {
-                        max-width: 1070px;
-                    }
+                    max-width: 400px; // Максимальная ширина изображения
+                    width: 100%; // Изображение занимает всю ширину родителя
+                    height: auto; // Сохраняем пропорции
+                    object-fit: cover; 
                 }
             }
 
             p {
                 color: #f1f1f1;
                 font-size: vars.$font-size-p;
-                text-align: center;
+                text-align: left; 
             }
-        }
-
-        // Стили для первой карточки
-        .project-card:first-of-type {
-            flex-direction: column;
-          
-
-            .photo-gallery {
-                justify-content: center; // Центрируем изображения
-                gap: 70px;
-
-                img {
-                    max-width: 500px;
-
-                    &:nth-child(3) {
-                        max-width: 1070px;
-                    }
+            //править код  надо здесь, стили не подтягиваются 
+            .project-card:not(:first-of-type) {
+                p {
+                    order: 1; // Текст слева
                 }
-            }
+    
+                .photo-gallery {
+                    order: 2; // Галерея справа
+                }
+        }
+    }
 
+       
+        }
+    }
 
+@media (max-width: 1024px) {
+    .row img {
+        flex: 0 0 100%; // Каждое изображение занимает всю ширину строки
+        max-width: 100%;
+        margin-bottom: 10px; // Уменьшаем отступы
+    }
+
+    .project-card {
+        flex-direction: column; // На узких экранах элементы располагаются в колонку
+
+        .photo-gallery {
+            justify-content: center; // Центрируем изображения
         }
 
+        p {
+            text-align: center; // Центрируем текст
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .row img {
+        margin-bottom: 5px; // Ещё меньше отступов
     }
 }
