@@ -22,33 +22,35 @@ const contents = [
 
 ];
 
-const ProjectPage = () =>{
-    return(
+const ProjectPage = () => {
+    return (
         <div className="ProjectPage">
             <div className="ProjectPage__content">
-            <h1>
-            Реализованные проекты
-            </h1>
-            <div className="static-gallery">
-                <div className="row">
-                <img src={Chaplygin1} alt="линии электропередач" />
-                <img src={Chaplygin2} alt="линии электропередач" />
+                <h1>
+                    Реализованные проекты
+                </h1>
+                <div className="static-gallery">
+                    <div className="row">
+                        <img src={Chaplygin1} alt="линии электропередач" />
+                        <img src={Chaplygin2} alt="линии электропередач" />
+                    </div>
+                    <div className="unrow">
+                        <img src={Chaplygin3} alt="линии электропередач" />
+                    </div>
+                    <p>Реконструкция электросетевых объектов  для Чаплыгинского РЭС для нужд ПАО  “Россети Центр” - “Липецкэнерго”</p>
+
                 </div>
-                <div className="unrow">
-                <img src={Chaplygin3} alt="линии электропередач" />
-                </div>
+                {contents.map((content, idx) => (
+                    <ProjectCard
+                        key={idx} // Используем индекс в качестве ключа
+                        photo={content.photo}
+                        text={content.text}
+                        isFirst={idx === 0} // Передаем проп для первого элемента
+                    />
+                ))}
 
             </div>
-            {contents.map(content =>(
-                <ProjectCard 
-                key={content.index}
-                photo={content.photo}
-                text={content.text}
-                />
-            ))}
-  
-            </div>
-           
+
         </div>
     );
 }

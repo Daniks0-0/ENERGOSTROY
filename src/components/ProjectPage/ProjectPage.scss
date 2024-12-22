@@ -1,8 +1,8 @@
 @use '_variables.scss' as vars;
 
 .ProjectPage {
-    padding-left: 100px !important;
-    padding-right: 40px !important;
+    padding-left: 100px;
+    padding-right: 100px;
 
     .ProjectPage__content {
         max-width: 1600px;
@@ -21,45 +21,46 @@
         .static-gallery {
             max-width: 1600px;
             width: 100%;
-            padding-right: 40px;
             display: flex;
             flex-direction: column;
             margin-bottom: 50px;
 
             .row {
-                max-width: 1600px; 
-                width: 100%; 
+                max-width: 1600px;
+                width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between; 
+                justify-content: space-between;
 
                 img {
-                    max-width: 48%; 
-                    flex: 0 0 48%; 
-                    height: auto; 
-                    object-fit: cover; 
+                    max-width: 48%;
+                    flex: 0 0 48%;
+                    height: auto;
+                    object-fit: cover;
                     margin-bottom: 50px;
                 }
             }
-
             .unrow {
                 img {
                     width: 100%; // Изображение занимает всю ширину родителя
                 }
             }
+            p {
+                color: #f1f1f1;
+                font-size: vars.$font-size-p;
+                text-align: left;
+                margin-top: clamp(10px, 2vw, 40px);
+            }
         }
-
         // Карточки проектов
         .project-card {
-            max-width: 1600px;
+            display: flex !important;
+            max-width: 1600px !important;
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+            gap: clamp(20px, 6vw, 300px);
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
             margin-bottom: 50px;
-
             .photo-gallery {
                 display: flex;
                 flex-wrap: wrap;
@@ -68,53 +69,102 @@
                     max-width: 400px; // Максимальная ширина изображения
                     width: 100%; // Изображение занимает всю ширину родителя
                     height: auto; // Сохраняем пропорции
-                    object-fit: cover; 
+                    object-fit: cover;
                 }
             }
-
             p {
                 color: #f1f1f1;
                 font-size: vars.$font-size-p;
-                text-align: left; 
+                text-align: left;
             }
-            //править код  надо здесь, стили не подтягиваются 
-            .project-card:not(:first-of-type) {
-                p {
-                    order: 1; // Текст слева
-                }
-    
+            &--first {
                 .photo-gallery {
                     order: 2; // Галерея справа
                 }
+        
+                .text {
+                    order: 1; // Текст слева
+                }
+            }
+                
+            }
         }
     }
 
-       
-        }
-    }
 
-@media (max-width: 1024px) {
-    .row img {
-        flex: 0 0 100%; // Каждое изображение занимает всю ширину строки
-        max-width: 100%;
-        margin-bottom: 10px; // Уменьшаем отступы
-    }
-
-    .project-card {
-        flex-direction: column; // На узких экранах элементы располагаются в колонку
-
-        .photo-gallery {
-            justify-content: center; // Центрируем изображения
-        }
-
-        p {
-            text-align: center; // Центрируем текст
+@media (max-width: 1200px) {
+    .ProjectPage {
+        padding-left: 10px;
+        padding-right: 10px;
+        .ProjectPage__content {
+            .row img {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+            .project-card {
+                flex-direction: column; // На узких экранах элементы располагаются в колонку
+                .photo-gallery {
+                    justify-content: center; // Центрируем изображения
+                }
+                p {
+                    text-align: center; // Центрируем текст
+                }
+                &--first {
+                    .photo-gallery {
+                        order: 1; // Галерея справа
+                    }
+            
+                    .text {
+                        order: 2; // Текст слева
+                    }
+                }
+            }
+           
         }
     }
 }
 
-@media (max-width: 480px) {
-    .row img {
-        margin-bottom: 5px; // Ещё меньше отступов
+@media (max-width: 600px) {
+    .ProjectPage {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .ProjectPage__content {
+            h1 {
+                margin-bottom: 30px;
+            }
+            .static-gallery {
+                .row {
+                    flex-direction: column;
+
+                    img {
+                        max-width: 100%;
+                        margin-bottom: 30px;
+                        margin-bottom: 10px; 
+                    }
+                }
+                p {
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+            .project-card {
+                p {
+                    text-align: center; 
+                }
+                &--first {
+                    .photo-gallery {
+                        order: 1; // Галерея справа
+                    }
+            
+                    .text {
+                        order: 2; // Текст слева
+                    }
+                }
+            }
+
+        }
+
     }
 }

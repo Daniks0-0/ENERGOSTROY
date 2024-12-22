@@ -2,12 +2,12 @@ import React from "react";
 
 
 
-const ProjectCard = ({ text, photo }) => {
+const ProjectCard = ({ text, photo, isFirst }) => {
     return (
-        <div className="project-card">
+        <div className={`project-card ${isFirst ? "project-card--first" : ""}`}>
             <div className="photo-gallery">
                 {photo.map((img, index) => (
-                    <img key={index} src={img}/>
+                    <img key={index} src={img} alt="Проект" />
                 ))}
             </div>
             <p className="text">{text}</p>
