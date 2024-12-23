@@ -1,14 +1,35 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import "./Footer.scss";
 
 const Footer = () => {
+    const handleContactsClick = () => {
+        navigate("/"); //переход на главную страницу
+        //скролл к разделу "Контакты"
+        setTimeout(() => {
+            const contactsSection = document.getElementById("contacts-id");
+            if (contactsSection) {
+                contactsSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    };
+    const handleServicesClick = () => {
+        navigate("/");
+        //скролл к разделу "Услуги"
+        setTimeout(() => {
+            const servicesSection = document.getElementById("servicesSection-id");
+            if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    };
+
     const data = new Date().getFullYear(); //текущий год
     return (
         <div className="footer">
             <div className="navigation">
-                <a href="#servicesSection-id">Услуги</a>
-                <a href="#contacts-id">Контакты</a>
+                <NavLink onClick={handleServicesClick}>Услуги</NavLink>
+                <NavLink onClick={handleContactsClick}>Контакты</NavLink>
                 <Link to="/projects" end>Проекты</Link>
             </div>
             <div className="aboutCompany">
