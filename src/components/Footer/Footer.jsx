@@ -1,21 +1,36 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink,useLocation, useNavigate } from "react-router";
 import "./Footer.scss";
 
 const Footer = () => {
-    const handleContactsClick = () => {
-        navigate("/"); //переход на главную страницу
-        //скролл к разделу "Контакты"
-        setTimeout(() => {
-            const contactsSection = document.getElementById("contacts-id");
-            if (contactsSection) {
-                contactsSection.scrollIntoView({ behavior: "smooth" });
+    const navigate = useNavigate(); // Инициализация хука
+    const location = useLocation(); // Хук для текущего пути
+
+    //функция для скролла и перехода на страницу
+    const scrollToSection = (sectionId) =>{
+        setTimeout(() =>{
+            const section = document.getElementById(sectionId); //поиск элемента по id
+            if(section){
+                section.scrollIntoView({behavior:"smooth"});
             }
-        }, 100);
+        }, 100)
+    }
+
+    const handleContactsClick = () => {
+        if(location.pathname !== "/"){
+            navigate("/"); // Переход на главную страницу
+            // Скролл к разделу "Контакты"
+            setTimeout(() => scrollToSection("contacts-id"), 100);
+        }
+        else{
+            scrollToSection("contacts-id");
+        }
+        
     };
-    const handleServicesClick = () => {
-        navigate("/");
-        //скролл к разделу "Услуги"
+
+    const handleServicesClickfromProjects = () => {
+        navigate("/"); // Переход на главную страницу
+        // Скролл к разделу "Услуги"
         setTimeout(() => {
             const servicesSection = document.getElementById("servicesSection-id");
             if (servicesSection) {
@@ -24,12 +39,13 @@ const Footer = () => {
         }, 100);
     };
 
-    const data = new Date().getFullYear(); //текущий год
+    const data = new Date().getFullYear(); // Текущий год
+
     return (
         <div className="footer">
             <div className="navigation">
-                <NavLink onClick={handleServicesClick}>Услуги</NavLink>
-                <NavLink onClick={handleContactsClick}>Контакты</NavLink>
+                <NavLink to="/"  onClick={handleServicesClickfromProjects}>Услуги</NavLink>
+                <NavLink to="/" onClick={handleContactsClick}>Контакты</NavLink>
                 <Link to="/projects" end>Проекты</Link>
             </div>
             <div className="aboutCompany">
@@ -44,6 +60,6 @@ const Footer = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Footer;
