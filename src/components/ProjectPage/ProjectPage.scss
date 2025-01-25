@@ -153,9 +153,16 @@
                 p {
                     text-align: center; 
                 }
+                .photo-gallery{
+                    img{
+                       max-width: 280px;
+                       width: 100%;
+                    }
+                }
                 &--first {
                     .photo-gallery {
                         order: 1; // Галерея справа
+                       
                     }
             
                     .text {

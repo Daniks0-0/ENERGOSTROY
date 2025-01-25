@@ -39,6 +39,17 @@ const Footer = () => {
         }, 100);
     };
 
+    const handleMainClick = () =>{
+        navigate("/");
+
+        setTimeout(() =>{
+            const mainSection = document.getElementById('main');
+            if(mainSection){
+                mainSection.scrollIntoView({behavior: "smooth"});
+            }
+        }, 100)
+    }
+
     const data = new Date().getFullYear(); // Текущий год
 
     return (
@@ -49,7 +60,7 @@ const Footer = () => {
                 <Link to="/projects" end>Проекты</Link>
             </div>
             <div className="aboutCompany">
-                <a href="/"> {data} © ЭНЕРГОСТРОЙ</a>
+                <Link to="/" onClick={handleMainClick}> {data} © ЭНЕРГОСТРОЙ</Link>
                 <Link to="/privacyPolicy" className="second" end>
                     Политика конфиденциальности
                 </Link>
