@@ -117,7 +117,9 @@
 
 @media (min-width: 300px) and (max-width: 600px) {
     .servicesSection {
-        padding: 0 10px;
+       padding-left: 15px;
+       padding-right: 15px;
+       padding-bottom: 10px;
         margin-bottom: vars.$margin-bottom-mobile;
         margin-top: vars.$margin-top-mobile;
 

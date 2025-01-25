@@ -1,13 +1,15 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route } from "react-router";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router'; // Используем react-router-dom
 import App from './App';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.createRoot(root).render(
-   <React.StrictMode>
-   <BrowserRouter>
-     <App />
-   </BrowserRouter>
- </React.StrictMode>
+// Рендерим приложение
+root.render(
+  <React.StrictMode>
+    <BrowserRouter basename='/ENERGOSTROY'>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );

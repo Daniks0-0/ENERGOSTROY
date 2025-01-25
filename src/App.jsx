@@ -9,11 +9,13 @@ function App() {
 
   return (
     <div className="app">
-  
-      <Navbar/>
+
       <main>
+      <Navbar />
         <Routes>
-          <Route index element={<Home />} /> {/* Главная страница */}
+          
+    
+          <Route  index element={<Home />} /> {/* Главная страница */}
           <Route path="projects" element={<Projects />} /> {/* Проекты */}
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
