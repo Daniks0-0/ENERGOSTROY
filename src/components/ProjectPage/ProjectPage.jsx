@@ -6,6 +6,8 @@ import Chaplygin2 from "../../assets/Chaplygin2.webp";
 import Chaplygin3 from "../../assets/Chaplygin3.webp";
 import Lebedyan from "../../assets/Lebedyan.webp";
 import others from "../../assets/others.webp";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const contents = [
@@ -31,11 +33,25 @@ const ProjectPage = () => {
                 </h1>
                 <div className="static-gallery">
                     <div className="row">
-                        <img src={Chaplygin1} alt="линии электропередач" loading="lazy" />
-                        <img src={Chaplygin2} alt="линии электропередач" loading="lazy" />
+                        <div className="row-LazyLoadImage">
+                            <div>
+                                <LazyLoadImage
+                                    className="row-photo"
+                                    src={Chaplygin1}
+                                    effect="blur"
+                                />
+                            </div>
+                            <div>
+                                <LazyLoadImage
+                                    className="row-photo"
+                                    src={Chaplygin2}
+                                    effect="blur"
+                                />
+                            </div>
+                        </div>
                     </div>
                     <div className="unrow">
-                        <img src={Chaplygin3} alt="линии электропередач" />
+                        <LazyLoadImage className="img"  src={Chaplygin3} alt="линии электропередач"  effect="blur"/>
                     </div>
                     <p>Реконструкция электросетевых объектов  для Чаплыгинского РЭС для нужд ПАО  “Россети Центр” - “Липецкэнерго”</p>
 

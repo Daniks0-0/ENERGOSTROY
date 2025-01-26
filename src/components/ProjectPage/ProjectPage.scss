@@ -26,22 +26,31 @@
             margin-bottom: 50px;
 
             .row {
-                max-width: 1600px;
-                width: 100%;
+              
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                flex-direction: row;
+                .row-LazyLoadImage{
+                    display: flex;
+                    flex-direction: row;
+                    max-width: 1600px;
+                    width: 100%;
+                    gap: 5%;
+                    span{
+                        display: flex;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                            margin-bottom: 50px;
+                        }
+                    }
 
-                img {
-                    max-width: 48%;
-                    flex: 0 0 48%;
-                    height: auto;
-                    object-fit: cover;
-                    margin-bottom: 50px;
                 }
             }
             .unrow {
-                img {
+                .img {
                     width: 100%; // Изображение занимает всю ширину родителя
                 }
             }
@@ -65,7 +74,7 @@
                 display: flex;
                 flex-wrap: wrap;
 
-                img {
+                .img {
                     max-width: 400px; // Максимальная ширина изображения
                     width: 100%; // Изображение занимает всю ширину родителя
                     height: auto; // Сохраняем пропорции
