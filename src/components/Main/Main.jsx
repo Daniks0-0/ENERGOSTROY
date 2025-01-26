@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.scss";
-import photo from "../../assets/image.svg";
+import photo from "../../assets/image.webp";
 const Main = () => {
     return(
         <div className="main" id="main">

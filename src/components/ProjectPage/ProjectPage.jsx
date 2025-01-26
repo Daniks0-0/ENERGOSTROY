@@ -1,11 +1,11 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import "./ProjectPage.scss";
-import Chaplygin1 from "../../assets/Chaplygin1.svg";
-import Chaplygin2 from "../../assets/Chaplygin2.svg";
-import Chaplygin3 from "../../assets/Chaplygin3.svg";
-import Lebedyan from "../../assets/Lebedyan.svg";
-import others from "../../assets/others.svg";
+import Chaplygin1 from "../../assets/Chaplygin1.webp";
+import Chaplygin2 from "../../assets/Chaplygin2.webp";
+import Chaplygin3 from "../../assets/Chaplygin3.webp";
+import Lebedyan from "../../assets/Lebedyan.webp";
+import others from "../../assets/others.webp";
 
 
 const contents = [
@@ -31,8 +31,8 @@ const ProjectPage = () => {
                 </h1>
                 <div className="static-gallery">
                     <div className="row">
-                        <img src={Chaplygin1} alt="линии электропередач" />
-                        <img src={Chaplygin2} alt="линии электропередач" />
+                        <img src={Chaplygin1} alt="линии электропередач" loading="lazy" />
+                        <img src={Chaplygin2} alt="линии электропередач" loading="lazy" />
                     </div>
                     <div className="unrow">
                         <img src={Chaplygin3} alt="линии электропередач" />
