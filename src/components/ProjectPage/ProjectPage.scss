@@ -141,17 +141,22 @@
 
         .ProjectPage__content {
             h1 {
+                margin-top: 30px;
                 margin-bottom: 30px;
             }
             .static-gallery {
                 .row {
                     flex-direction: column;
+                    .row-LazyLoadImage{
+                        flex-direction: column;
+                       span{
+                        img {
+                            max-width: 100%;
+                            margin-bottom: 30px;
+                            margin-bottom: 10px; 
+                        }
 
-                    img {
-                        max-width: 100%;
-                        margin-bottom: 30px;
-                        margin-bottom: 10px; 
-                    }
+                       }
                 }
                 p {
                     margin-top: 10px;
@@ -182,5 +187,6 @@
 
         }
 
+    }
     }
 }
